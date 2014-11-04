@@ -66,7 +66,7 @@
 \title{\Huge \textbf{The \textit{Wikinews} Style Guide}}
 % Author
 \author{\textsc{Written by the Wikinews Community}}
-\date{}
+\date{} %Leave blank to supress date
 
 \begin{document}
 
@@ -158,7 +158,7 @@ acomo,   Cllewr,   Deprifry,   SEWilco,   DavidConrad,   Doldrums,   Yaf201,   K
 
 \begin{chapquote}{George Orwell\footnote{Orwell, G., 1946. ``Politics and the English Language''. \textit{Horizon} 13(76): 252--264.}}
 
-...[T]he English language is in a bad way... Our civilization is decadent, and our language --- so the argument runs --- must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism... Underneath this lies the half-conscious belief that language is... not an instrument which we shape for our own purposes.
+[...] The English language is in a bad way [...] Our civilization is decadent, and our language --- so the argument runs --- must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism  [...] Underneath this lies the half-conscious belief that language is... not an instrument which we shape for our own purposes.
 \end{chapquote}
 
 \section{Six tips on better better writing}
@@ -212,7 +212,7 @@ A quick check is try to word your sentences to avoid verbs ending in `-ing' and 
 
 \end{description}
 
-\section{Using the Date and Dateline templates}
+\section{Using the Date template}
 
 Articles must include at least the date as the first line of the article. This is most easily accomplished using the date template (if you were not present at the event you are reporting upon), so the first line of each article should include this code:
 
@@ -222,11 +222,12 @@ Articles must include at least the date as the first line of the article. This i
 
 The template will add the article to the appropriate date category, and put the date on the first line in bold text. The date given on an article is should be of the day on which the article was published. The date on which the event happened is not the story's date.
 
-In journalism, the location in the dateline may either refer to the location of where the article was filed from or where the event happened even if the writer was not physically present. Currently, the dateline template is only used when a Wikinewsie is actually present to ``file'' the story (generally as original reporting). The template generates text in the following manner:
+In journalism, the location in the dateline may either refer to the location of where the article was filed from or where the event happened even if the writer was not physically present. Use this format only used when a Wikinewsie is actually present to ``file'' the story (generally as original reporting), in the following manner:
 
 \begin{verbatim}
-{{dateline|date=January 1, 2005|location=Mumbai, India}} Massive 
-floods soaked ...
+{{date|January 1, 2005}}
+
+{{w|Mumbai}}, {{w|India}} &mdash;
 \end{verbatim}
 
 \noindent which appears like this in an article:
@@ -554,7 +555,7 @@ Always clarify the timezone, which can be either the country/city referred to or
 \end{itemize}
 When using the 12-hour format, morning hours before noon and after midnight are designated as "a.m.", both letters lowercase with periods. Hours after noon and before midnight are "p.m." Again, both letters lowercase with periods.
 
-An exception for times of exactly 12 noon are called ``noon'' and 12 midnight are called ``midnight.'' Neither are referred to as ``12:00 a.m.'' or ``12:00 p.m.''
+An exception for times of exactly 12 noon are called ``noon'' and 12 midnight are called ``midnight.'' Neither is referred to as ``12:00 a.m.'' or ``12:00 p.m.''
 
 \section{Names of people and organizations}
 On the first mention of a person in a story, write the person's organization, title, and full name. Try to include a local link or Wikipedia link to their organization and name. For example,
@@ -746,7 +747,7 @@ When uploading the time-specific version of the image to Commons, please ensure 
 
 You should add category tags at the bottom of each article. At a bare minimum there should be categories for the geographical area involved (one for the country, and one for the region) and for a broad topic such as \href{https://en.wikinews.org/wiki/Category:Disasters_and_accidents}{Category:Disasters and accidents}.
 
-The Wikinews \texttt{\{\{date\}\}} and \texttt{\{\{dateline\}\}} templates automatically add the date category to your article, linking it to a list of all articles from that date.
+The \textit{Wikinews} \texttt{\{\{date\}\}} template automatically adds the date category to your article, linking it to a list of all articles from that date.
 
 \section{Perfection}
 While you should obviously try to comply perfectly with this guide, it is difficult to avoid some small mistakes. Even the most experienced Wikinewsies will sometimes produce articles that do not comply with some of these points. Try to stick as closely as possible to this guide, and remember, if you get most things right, review should catch and if possible correct your occasional slip-ups.
