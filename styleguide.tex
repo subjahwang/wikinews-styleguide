@@ -1,0 +1,757 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letter,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage{wrapfig,floatrow}
+\usepackage[official]{eurosym}
+\usepackage[autostyle=true,english=american]{csquotes}
+%\usepackage{epigraph}
+\usepackage{color}
+%\usepackage{siunitx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[autostyle=true,english=american]{csquotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 'dedication' environment: To add a dedication paragraph at the start of book %
+% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{The \textit{Wikinews} Style Guide}}
+% Author
+\author{\textsc{Written by the Wikinews Community}}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add a dedication paragraph to dedicate your book to someone %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{dedication}
+%Dedicated to Calvin and Hobbes.
+%\end{dedication}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto-generated table of contents, list of figures and list of tables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\mainmatter
+
+%%%%%%%%%%%
+% Preface %
+%%%%%%%%%%%
+\chapter*{Preface}
+This is the \textit{Wikinews} style guide and it is is widely accepted among editors and considered a standard that all users should follow. However, it is not cast in stone, should be treated with common-sense, and \href{https://en.wikinews.org/wiki/Wikinews:Ignore_all_rules}{occasional exceptions} are expected.
+
+The authoritative version of this document is located on \textit{Wikinews} at \url{https://en.wikinews.org/wiki/Wikinews:Style_guide}.
+
+\section*{Introduction to the style guide}
+The \textbf{style guide} deals with the ways \textit{Wikinews} content should be presented to readers. See the \href{https://en.wikinews.org/wiki/Wikinews:Content_guide}{content guide} for information on the reporting process. See \href{https://en.wikinews.org/wiki/Help:Editing}{editing help} for information on the wiki editing syntax.
+
+This is not intended to be a comprehensive guide to English spelling, grammar, and punctuation; it is assumed that the majority of contributors are well-versed in writing for an educated native-speaking audience. A number of the external guides listed in this document are excellent references when seeking to improve your command of the English language.
+
+\section*{Purpose}
+The vast majority of news sources rely upon a manual of style, a collection of agreed-upon guidelines for writing style. A style guide helps writers and editors by providing a standardised way of writing. Style guides help ensure consistency in such things as headlines, abbreviations, numbers, punctuation and courtesy titles. Style guides therefore are most helpful.
+
+A news style is developed with emphasis on the efficient and accurate imparting of information about events; following our news style suggestions should have the additional benefit of helping you write effectively if you are a newcomer to writing news.
+
+The \textit{Wikinews} style guide is aimed at producing understandable and informative articles readily understood by the majority of readers. Articles that do not adhere to the style guide are unlikely to be published.
+
+\section*{Status}
+The \textit{Wikinews} style guide, like all style guides at working news organisations, is a work in progress and subject to change as new issues emerge and the language of news coverage evolves. Changes to the guide are not applied retroactively.
+
+\subsection*{Conventions}
+
+Elements of punctuation and grammar are not addressed by exactly the same terms universally. There is no intention to be regionalist in this manual; however, in the interests of causing the least confusion, the following terms are used for clarity:
+
+\begin{itemize}
+\item  \textbf{period}---this American term is used to describe full-stops (the British or international term).
+\end{itemize}
+   
+\section*{Licensing and other matters}
+On \textit{Wikinews}, all text created after September 25, 2005 available under the terms of the Creative Commons Attribution 2.5 License\footnote{\url{https://creativecommons.org/licenses/by/2.5/}}, unless otherwise specified.
+
+This document is based entirely on the style guide on \textit{Wikinews} and is available under the terms of the aforementioned Creative Commons license.
+
+\textit{Wikinews}\textsuperscript{®}, and the \textit{Wikinews} logo are registered trademarks of the Wikimedia Foundation, Inc.
+
+\noindent This guide was typeset using \LaTeX{} and using the \LaTeX{} book template by \href{http://amberj.devio.us/}{Amber Jain}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Give credit where credit is due. %
+% Say thanks!                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgements}
+All contributors to this style are listed on the detailed article history page on \textit{Wikinews}.\footnote{\url{https://en.wikinews.org/w/index.php?title=Wikinews:Style_guide&action=history}}
+
+The contributors to this style guide are:
+
+Angela,   Eloquence,   Merriam,   AaronSw,  Saforrest,  Lyellin,  Thebellman,  119,  CGorman,  Tomos,  BrokenSegue,  DavidVasquez,  Cap'nRefsmmat,  IlyaHaykin-
+son,   Jiang,   Magic5ball,   Simeon,   Nyarlathotep,   Shizhao,   Davodd,   Amgine,   Fred Condo,   Xcjm,   Dan100,   Pingswept,   MikeEdwards,   Brian
+McNeil,  Nikai,  UncleG,  DouglasGreen,  LukeSurl,  Bawolff,  Omphaloscope,  Barnabydawson,  Mrmiscellanious,  Beland,  DeanBrettle,  Chi-
+acomo,   Cllewr,   Deprifry,   SEWilco,   DavidConrad,   Doldrums,   Yaf201,   Karen,   Frankie Roberto,   The wub,   DragonFire1024,   KeithH,   67-
+21-48-122,   FellowWikiNews,   Tooby,   Ashlux,   Impersonation vandaluser account,   SVTCobra,   Stevenfruitsmaak,   Michael614,   Cocoaguy,  InfantGorilla,  Grimlock,  Neevan,  VanderHoorn,  Wisekwai,  Aristeo,  CommonsDelinker,  Jcart1534,  BloodRedSandman,  Jurock,  Jhertel,  Cirt,  Mehmet,  KillingVector,  BOT-Superzerocool, Xavexgoem, Microchip08, Calebrw, Nico89abc, Gopher65, Ohconfucius, Pi zero, Tempodivalse, Tony1, Mikemoral, WattiRenew, Reality006, AlexandrDmitri, TomMorris, Xbspiro, Plest, Itu, MC10, TeleCom-NasSprVen, Graham87, Owenlo, Mjbmrbot, and 33 anonymous contributors.
+
+\mbox{}\\
+%\mbox{}\\
+\noindent This document was assembled by Mikemoral, a Wikinewsie. \\
+\noindent \url{https://en.wikinews.org/wiki/User:Mikemoral}
+
+%%%%%%%%%%%%%%%%
+% NEW CHAPTER! %
+%%%%%%%%%%%%%%%%
+\chapter{Basic news writing}
+
+%\epigraph{[...] the English language is in a bad way, [...] Our civilization is decadent, and our language – so the argument runs – must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism, [...] Underneath this lies the half-conscious belief that language is [...] not an instrument which we shape for our own purposes.}{George Orwell\footnote{Orwell, G., 1946. ``Politics and the English Language''. \textit{Horizon} 13(76): 252--264.}}
+
+\begin{chapquote}{George Orwell\footnote{Orwell, G., 1946. ``Politics and the English Language''. \textit{Horizon} 13(76): 252--264.}}
+
+...[T]he English language is in a bad way... Our civilization is decadent, and our language --- so the argument runs --- must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism... Underneath this lies the half-conscious belief that language is... not an instrument which we shape for our own purposes.
+\end{chapquote}
+
+\section{Six tips on better better writing}
+In his 1946 essay ``\href{https://en.wikipedia.org/wiki/Politics_and_the_English_Language}{Politics and the English Language},'' author George Orwell devised six easy tips to make anyone a better writer:
+
+\begin{enumerate}
+\item Never use a metaphor, simile or other figure of speech which you are used to seeing in print.
+\item Never use a long word where a short one will do.
+\item If it is possible to cut a word out, always cut it out.
+\item Never use the passive where you can use the active.
+\item Never use a foreign phrase, a scientific word or a jargon word if you can think of an everyday English equivalent.
+\item  Break any of these rules sooner than say anything barbarous.
+\end{enumerate}
+
+\section{Headlines}
+
+When naming your article, keep the following points in mind. Most of them apply also to the body of the article, and are covered in greater detail later in the style guide.
+
+\begin{description}
+\item[Make them unique and specific] Due to the way the software of Wikinews works, each headline must be unique; choose specific details which describe this unique news event.
+
+
+\item[Make them short] Headlines are as short as possible. The word `and' is generally replaced by a comma. Example:``Powell and Annan set international goals for aid'' could be written as ``Powell, Annan set international goals for aid''
+
+\item[Use verbs] A headline is essentially a sentence without ending punctuation, and sentences have verbs.
+
+\item[Use downstyle capitalisation] Downstyle capitalisation is the preferred style. Only the initial word and proper nouns are capitalized. In upstyle headlines, all nouns and most other words with more than four letters are capitalized.
+
+\begin{itemize}
+\item Downstyle: ``Powell to lead U.S. delegation to Asian tsunami region''
+\item Upstyle: ``Powell to Lead U.S. Delegation to Asian Tsunam Region.''
+\end{itemize}
+
+\item[Write in a neutral point of view] headlines should not be biased in tone or word choice.
+
+\item[Tell the most important and unique thing] Article titles should consist of a descriptive, enduring headline. As a series of stories on a topic develop, each headline should convey the most important and unique thing about the story at that time.
+
+For example, ``Los Angeles bank robbed'' is an unenduring headline because there will likely be another bank robbery in Los Angeles at some point. Instead, find the unique angle about the story you are writing and mention that: ``Thieves commit largest bank robbery in Los Angeles history,'' or ``Trio robs Los Angeles bank, escapes on motorcycles,'' or even ``Trio commits largest bank robbery in Los Angeles history, flees on motorcycles.''
+
+\item[Use present tense] Headlines (article titles) should be written with verbs in present tense.
+
+\item[Use active voice] News is about events, and generally you should center on the doers, and what they are doing, in your sentence structure. Active voice is ``Leader goes to shops,'' whereas passive voice, to be avoided, would be ``Shops visited by leader.''
+
+A quick check is try to word your sentences to avoid verbs ending in `-ing' and look for `be verbs,' e.g., `are going to' can easily be converted to `will' or simply `to.' Rather than ``More criminals are going to face execution in 2005,'' if we put ``More criminals to face execution in 2005'' or ``More criminals face execution in 2005,'' a better sense of immediacy is conveyed.
+
+\item[Try to attribute any action to someone] ``Insurgents shoot U.S. troops in North Baghdad'' is better than ``U.S. troops shot in North Baghdad.''
+
+\item[Avoid jargon and meaningless acronyms] Avoid uncommon technical terms, and when referring to a country or organization, use its full name rather than acronym, unless the acronym is more common than the full name (e.g., NASA, UK, AIDS) or length is prohibitive. In cases where using an acronym because length is prohibitive, spell the acronym out as soon as possible in the article body.
+
+\item[Quotes can be used in titles] Occasionally a interesting or unusual quotation in the article may be added to the front of the headline to add appeal. Quotes in headlines should use single quotation marks and if used at the start are usually followed by a colon, e.g., ``\,`Being this strange rocks': Wikinews interviews interesting person''
+
+\end{description}
+
+\section{Using the Date and Dateline templates}
+
+Articles must include at least the date as the first line of the article. This is most easily accomplished using the date template (if you were not present at the event you are reporting upon), so the first line of each article should include this code:
+
+\begin{verbatim}
+{{date|Month DD, YYYY}}
+\end{verbatim}
+
+The template will add the article to the appropriate date category, and put the date on the first line in bold text. The date given on an article is should be of the day on which the article was published. The date on which the event happened is not the story's date.
+
+In journalism, the location in the dateline may either refer to the location of where the article was filed from or where the event happened even if the writer was not physically present. Currently, the dateline template is only used when a Wikinewsie is actually present to ``file'' the story (generally as original reporting). The template generates text in the following manner:
+
+\begin{verbatim}
+{{dateline|date=January 1, 2005|location=Mumbai, India}} Massive 
+floods soaked ...
+\end{verbatim}
+
+\noindent which appears like this in an article:
+
+\begin{verbatim}
+Saturday, January 1, 2005
+
+Mumbai, India — Massive floods soaked...
+\end{verbatim}
+
+\textit{Wikinews} does not sign articles as by an author. Articles may be edited by anyone, and are usually contributed to by more than one person, so a traditional byline is inappropriate.
+
+\section{The first paragraph}
+
+The first paragraph (known as the intro or \href{https://en.wiktionary.org/wiki/lede#Noun_2}{lede}) should summarize the article in around 50--80 words, using one to three sentences.
+
+Try to answer the basic questions of who, what, where, when, why and how. Try to fit most of these into the first paragraph. This is known as the ``\href{https://en.wikinews.org/wiki/Wikinews:Who_What_When_Why_Where_and_How}{five W's (and an H)},'' and is the first thing to learn about news writing.
+
+Don't feel stifled by this suggestion. Those experienced in reporting learn to determine which of those six questions are the most relevant to the story (and, more importantly, the reader). This gets easier with practice, as does most writing.
+
+If you don't have the answer to one or two of them, skip it, but explain if possible why you don't know later in your story.
+
+Don't make your first paragraph a boring list of facts. It is the first thing the reader sees, so make it interesting.
+
+Every fact or issue mentioned in the first paragraph should be later backed up or expanded in the main body of the article. You needn't explain everything fully in the intro, but what is mentioned should be fully explained before the reader finishes reading the article.
+
+\section{Article length}
+
+Most complete articles should have at least three paragraphs, and single-line paragraphs do not count for this purpose. Don't post articles containing only a link to a story on an external news site and no story text. Such pages are quickly deleted.
+
+One way to publish short briefs that you are not planning to expand further is in \href{https://en.wikinews.org/wiki/Category:Wikinews_Shorts}{Wikinews Shorts}.
+
+If there is significant breaking news whose article is likely to be expanded, do go ahead and write a short (but useful!) summary as breaking news, and tag it with \texttt{\{\{\href{https://en.wikinews.org/wiki/Template:Breaking_review}{breaking review}\}\}}. You can add an \texttt{\{\{\href{https://en.wikinews.org/wiki/Template:Expand}{expand}\}\}}-tag. This will invite other editors to work on the article. Note that just because a story has just broken does not mean it is in the process of breaking. Try and write at least a paragraph where news is breaking, but beware the pitfall that by the time it is reviewed the story may have already moved on to the point where it is no longer appropriate to publish a minimalist piece without expansion.\footnote{See \href{https://en.wikinews.org/wiki/Wikinews:Breaking_news}{Wikinews:Breaking news}.}
+
+\section{Writing tone and structure}
+
+Write to be easily understood, to make reading easier. A key, and strict, policy is absolute neutrality. See the neutrality policy for full details of this.
+
+Beyond the first paragraph, try to stick to the following tips:
+
+\begin{itemize}
+\item Use brief paragraphs --- between 30 and 80 words is considered acceptable in newspaper writing
+    \begin{itemize}
+        \item Each paragraph should ideally be only one or two sentences (three if you use very short sentences)
+        \item Each paragraph covers a single topic only concentrate on the new facts and their known or potential consequence -- background information is of lesser importance            (aka exposition)
+    \end{itemize}
+
+\item Put the most important and newsworthy facts first, with least important and least immediate facts last — this is opposite to development order in typical narratives, and is termed inverted-pyramid style. See Figure 1.1.
+\item Use plain English
+\item Use punchy, active language to intone a sense of immediacy
+\item Be balanced
+\item Be clear, concise and unambiguous
+\item Promote the human aspects of any story, using quotes etc — this makes the story interesting to a wider range of people
+\item Ascribe any speculation to a source — never introduce any of your own
+\end{itemize}
+
+\begin{wrapfigure}{r}{0.5\textwidth} %this figure will be at the right
+   \centering
+   \includegraphics[width=0.75\textwidth]{invert}
+   \caption{Visual representation of the inverted pyramid style for a news article. Image by US Air Force Departmental Publishing Office. Image is in the public domain.}
+\end{wrapfigure}
+
+If you find your work is too wordy, try juggling word order to squeeze out unnecessary words. You may be surprised how many you can find! This gets easier with practice. Other users are likely to help you out.
+
+The reason for inverted-pyramid style is twofold:
+
+\begin{itemize}
+\item To help the reader, who is usually in a hurry when reading news. Putting the important and new aspects first helps since they may skip the story after only a couple of paragraphs.
+\item To help people who are editing your story later. We appreciate stories with plenty of details, but we still like short punchy stories are preferable to rambling essays.
+\end{itemize}
+
+\section{Attribution}
+
+When adding opinions, unverified claims, speculation and the like it should always be attributed to the person or organisation that said it:
+
+\begin{itemize}
+\item \textit{Analysts at the University of Cambridge expect market conditions to be tough} rather than \textit{Tough market conditions are anticipated by experts}
+\item \textit{Doyle said ``there were five people in the car''} rather than \textit{One source put the occupants of the car at five}
+\end{itemize}
+
+\section{Verb tense}
+
+Articles should be written in the past tense or the present perfect. Headlines should be written in the present tense. Timelines are also written in the present tense.
+
+\subsection{Reporting on future events}
+
+Since we as writers are not in the business of predicting the future and are not psychic (arguably), it is best to stick to past or present perfect tense, especially since future events may change (or be cancelled). When writing about future or ongoing events, change tense as follows:
+
+\begin{itemize}
+\item \textit{They will meet next Tuesday} -- change to: \textit{They are scheduled to meet next Tuesday} or \textit{They said they would meet next Tuesday}
+\item \textit{The event will continue through the end of August} -- change to: \textit{The event is scheduled to continue through August} or \textit{The event is supposed to continue through August}.
+\item \textit{The show debuts in July 2014} or \textit{The show will open in July 2014} -- change to: \textit{The show's debut is scheduled for July 2014} or something similar.
+\item \textit{The couple will celebrate their third anniversary next month} -- change to: \textit{The couple plan to celebrate their third anniversary next month}.
+\item \textit{The hearing will take place tomorrow} -- change to: \textit{The hearing is set to take place tomorrow}
+\end{itemize}
+
+\chapter{Citing your references}
+
+Articles may include a variety of links and citations. They generally fall into four groupings: links to external online sources, other \textit{Wikinews} articles, links to background pages on other WMF sister projects, and websites with background or related information. Each grouping can have its own section; there should be a distinction at least between links to factual support (other modern \textit{Wikinews} articles and external sources) and links to background pages and websites. The standard sections for these groupings are ``Related news,'' ``Sister links,'' ``Sources,'' and ``External links'' (in that order). Only the ``Sources'' section is mandatory.
+
+Documents used as source material in the story need to be cited. This is to acknowledge prior art, so that information can be evaluated and verified by readers, and just as a general benefit to the reader.
+
+\section{Sources section}
+
+Sources include online articles and, for original reporting, reporter's notes.
+
+Links to online sources should be listed after the optional ``Related news'' and ``Sister links'' sections, in a section ``Sources'' using the wiki markup \texttt{==Sources==}. Bullet-point each source using an \texttt{*} (asterisk). Do not leave blank lines between sources — this is for technical reasons relating to how the wiki markup is converted into HTML code. Sources should be listed chronologically, from the most recent to the oldest.
+
+\subsection{Linking sources}
+
+Use links to online sources, and include important relevant information about the source.
+
+The important information when citing a source includes the author of the article (a person or organization), the title of the source, who it is published by, and when it was published.
+
+There exists template code which may help you to format the information:
+
+\begin{verbatim}
+{{source | url=Web site address | title=Article title | author=
+Name of author | pub=Name of Publication or Source | date=Date
+as Month DD, YYYY\}\}}. 
+\end{verbatim}
+
+Simply copy and paste the template into your story text, and replace the text after the equals sign in each template variable assignment. If you do not know a variable, for example the author's name, include the variable name but leave it blank. (|author= ) Example:
+
+\begin{verbatim}
+* {{source| url=http://news.xinhuanet.com/english/2005-02/15/
+content_2579436.htm | title=Second US missile defense test fails
+| author= | pub=Xinhua | date=February 15, 2005 }}
+\end{verbatim}
+
+Would appear as:
+
+\begin{itemize}
+\item ``Second US missile defense test fails'' --- \textit{Xinhua}, February 15, 2005
+\end{itemize}
+
+\noindent Note that the ``month day, year'' date format should always be used for all dates in sources regardless of how the source cites the date. Do not use leading zeroes on dates between one and nine, i.e., do not, for example, use ``March 05.'' The day of the week or time should never be included. Dates should be according to the timezone of the source.
+
+\subsection{Citing syndicated (wire agency) content}
+
+Many stories are provided by wire news agencies (e.g., the Associated Press (AP), Reuters, or Agence France-Presse (AFP)) that syndicate their content through other media outlets. Although the wire news agency writes the story, the carrying news media exercises editorial control in deciding whether or not to publish a story. Therefore, a report written by the Associated Press that appears in The Guardian should be credited as follows: the Associated Press as the author, and The Guardian as publisher. Where an AP author is cited this should be included. Where the abbreviation for the agency does not lead directly to a Wikipedia page (e.g., ``\href{https://en.wikipedia.org/wiki/AFP}{AFP}'' is a disambiguation page on Wikipedia), the full name of the agency should be used (Agence France-Presse). For the BBC online news site, the link BBC News Online should be used.
+
+Whenever possible, choose the wire agency's site if the agency publishes its own stories. If this is not possible, try to pick a site that you think will have the story available online for the longest time, if you have more than one choice.
+
+Articles from news sites which are initially from a wire service should have the wire service added to the author's name, or just the wire service if no author is given. For example, ``\texttt{author=Anne Gearan, AP}'' or ``\texttt{author=Agence France-Presse}''.
+
+\subsection{Numbered annotations}
+
+Academic-style numbered annotations or inline sourcing are generally not accepted on \textit{Wikinews}. Instead list all sources used in the sources section.
+
+\section{Related news section}
+
+Events may produce a variety of articles on \textit{Wikinews} with different angles or covering different aspects of the events. Current events may also benefit from readers being directed to one or two appropriate articles. In addition, earlier \textit{Wikinews} articles may serve as sources for the current article.\footnote{See \href{https://en.wikinews.org/wiki/Wikinews:Cite_sources}{Wikinews:Cite sources} for details on this.}
+
+These should be ordered with the most recent on top in a bulleted list, using the \texttt{\{\{Wikinews\}\}} template thus:
+
+\begin{verbatim}
+*{{Wikinews|title=Massive star cluster found in Milky Way|date=
+March 26, 2005}}
+\end{verbatim}
+
+\noindent In use it looks like
+
+\begin{itemize}
+\item ``Massive star cluster found in Milky Way'' --- \textit{Wikinews}, March 26, 2005
+\end{itemize}
+
+\noindent Do not overload the related news section, nor add articles published after the one you are editing. Use infoboxes, and other decorative templates, to offer readers collected article lists they may also be interested in reading.
+
+\section{Sister links section}
+
+Related and background content on other Wikimedia Foundation sister projects may be placed in an optional section ``Sister links,'' below optional ``Related news'' and above ``Sources.'' A single call to template \texttt{\{\{sisters\}\}} can provide up to six links to pages on other sisters, in a bulleted list. Pages on most other sister projects, including Wikipedia, are not accepted as sources for \textit{Wikinews} articles.
+
+\section{External links section}
+
+External links should not be included without good reason and are rarely used. Link to a central, relevant page, not multiple pages on a single website; do not create comprehensive link lists. Uses of external links include to link to an interviewee's website when doing original reporting or to link to a controversial page which is the main focus of the news story.
+
+%%%%%%%%%%%%%%%%%%
+% Detailed style
+% issues
+%%%%%%%%%%%%%%%%%%
+
+\chapter{Detailed style issues}
+
+\section{Abbreviations}
+
+Abbreviations and contractions are handled differently by different dialects of English, and there is no set rule regarding them other than to be consistent throughout the article, and the original contributor's style choice is preferred. Acronyms and abbreviations should always be explained on or prior to first usage. For example, if a story relies on several points from the Associated Press then the first usage would be \enquote{Associated Press (AP)} and subsequent to that the abbreviation ``AP'' could be used.
+
+\section{Spelling}
+
+Spelling may be contentious because it varies depending on the dialect of English. On \textit{Wikinews} we generally follow the spelling patterns of the subject of the article (British English for articles about the UK, American English for those about the US, etc.) as first preference, and those of the article's first author where there is no obvious geographical preference.
+
+Wikipedia has a \href{https://en.wikipedia.org/wiki/American_and_British_English_spelling_differences}{list of spelling differences between American and British English} which may be helpful.
+
+\section{Numbers}
+
+Numbers below 20 are generally spelled out, but above that actual digits are the norm. Where you start moving into the very large territory and are mentioning numbers such as 10,000,000 you should use the more verbal form of ``ten million.''
+
+Common sense should be applied here. Where you can use words as opposed to numbers you should, but not in cases where you would be writing ``one hundred and forty-two'' over 142.
+
+Many ``classic'' guides to English cite a rule that any number at the start of a sentence should be spelled out; \textit{Wikinews} does not apply this rigorously, but it should guide your decision-making, especially in headlines.
+
+\subsection{Sequential numbers}
+
+Numbers indicating sequence follow the primary guideline for other numbers. Spell out first through tenth, but use numerals beginning at 11th and continuing through 23rd to 251st and beyond. Again apply common sense for large round numbers such as 1,000th being written as thousandth.
+
+\textbf{Note}: See how twenty-third is written ``23rd'' and not as ``23d.''
+
+\subsection{Decimal fractions}
+
+Either a comma or a point is acceptable, e.g., 1,5 is the same as $1.5$; however, in English the latter is the more common and readily understandable format. Exercise caution in choice of format to avoid 1.509 being mistaken for one thousand five hundred and nine.
+
+\subsection{Large numbers}
+
+The decimal can be used to spell out large fractional numbers such as one and a half million to be ``1.5 million'' instead of ``1,500,000'' or ``1 500 000.'' In the UK, the US, and several other nations commas are used as thousand separators and points are used as decimal separators. In other regions (e.g., South Africa) a space is used as a thousands separator and the comma is used as the decimal separator. Either is appropriate, but use first the style used in the region written about, second the style of the original author. Avoid use of the Indian numbering system words \textit{lakh} and \textit{crore}; these are ambiguous and not understandable to a universal audience.
+
+\subsection{Currency codes}
+
+It is best to avoid regional lingo or specialized monetary or financial jargon that is not in common, everyday use among the international readers of Wikinews, such as ``bucks,'' ``kiwi,'' or ``quid.'' Currency codes as listed in the \href{https://en.wikipedia.org/wiki/ISO_4217}{ISO 4217} standard are unique 3-letter codes that identify all internationally known currencies. While technically accurate, they may not be readily identifiable by most readers. For this reason, it may be best to spell out the name of the currency rather than relying upon the ISO currency code. This allows maximum understanding for the maximum number of readers. For example, almost everyone will understand what "1,000 Iraqi dinars" means as opposed to the ISO equivalent, "IQD 1,000." Either way, it is a good idea to wikilink to the currency in question, to allow the reader quick access to information about the currency. Using the previous example, one could use ``\texttt{1,000 [[w:Iraqi dinar|Iraqi dinar]]}'' to yield text with a link to the Wikipedia article on the dinar or ``\texttt{[[w:Iraqi dinar|IQD]]1,000}.''
+
+\subsection{Currency symbols}
+
+There are a few currency symbols that are understood by most English readers.
+\begin{itemize}
+\item \$ -- dollar
+\item £ -- pound
+\item \euro{} -- euro
+\item \textyen \space-- yen
+\end{itemize}
+
+However, they are not always unique identifiers for a particular currency. Also, there are many other less well-known currency signs. To aid the reader, all monetary denominations not listed above should be spelled out ("130.50 Swedish krona") or prefixed with a currency code ("SEK130.50") instead of using a symbol.
+
+For the euro and the yen, you may freely use the symbol, instead of using a code. But for the \$ (dollar) and £ (pound), further clarification may be necessary. Please read below.
+
+\subsubsection{\$ - Use of the dollar symbol}
+
+For dollars, only the "\$" is used. Please do not use the cent symbol (¢).
+
+    One dollar and twenty-five cents should be written as: "\$1.25"
+    Twenty-five cents should be written as: "\$0.25" and not "25¢"
+
+Since the United States, Canada, Australia, New Zealand and many other countries all use dollars, it is important to label the type of dollar referenced. Pay particular attention to this because many newswires may report amounts in United States dollars, even if the local currency is different.
+
+Sample dollar notation is as follows:
+
+\begin{description}
+\item[Australia] ``A\$1.25'' or ``AUD1.25''
+\item[Canada] ``C\$1.25'' or ``CAD1.25''
+\item[New Zealand] ``"NZ\$1.25'' or ``NZD1.25''
+\item[United States] ``US\$1.25'' or ``USD1.25''
+\end{description}
+
+\subsubsection{£ - Use of the pound symbol}
+
+A number of countries use the pound as their currency. Among those, only the pound sterling (GBP), the currency of the United Kingdom and Crown dependencies, is consistently associated with the pound sign (£). Occasionally, it is used to refer to the Egyptian pound, but here LE or EGP are more common. Therefore, amounts in pound sterling can be referred to using only the ``£'' symbol.
+
+If you cannot find this symbol on your keyboard, you may either use the HTML code \texttt{\&pound;} or the words "pound" or "pounds" instead of the symbol. However, you should be able to find the character in the character insert box below the edit box.
+
+\begin{itemize}
+\item One pound twenty-five is written as: £1.25 or GBP1.25
+\item Twenty-five pence is written as: £0.25 or GBP0.25, do not use the notation ``p''
+\end{itemize}
+
+Therefore, there is no need to further distinguish the pound sterling (GBP) from other forms of currency. It is assumed that when "pound" or the pound sign (£) are used, the amounts are in GBP unless otherwise noted.
+
+\subsubsection{\euro{} - Use of the euro symbol}
+
+The euro is the common currency for a number of European countries. To denote euro, only the euro sign (\euro{}), currency code EUR, or the word "euro" is needed. Do not use the cent symbol. If you cannot find the euro symbol on your keyboard, you may either use the HTML code: \texttt{\&euro;} or the word "euro" after the number figure instead of the symbol. You should also be able to find "\euro{}" in the character insert box below the edit box. Note, the plural of ``euro'' is officially ``euro''; while the pluralization ``euros'' is commonly found, it is inaccurate.
+
+\begin{itemize}
+\item Two euro and twenty-five cent is written as: \euro{}2.25 or EUR2.25
+\item Twenty-five euro cent is written as: \euro{}0.25 or EUR0.25; avoid reference to euro cent. 
+\end{itemize}
+
+\section{Date and time}
+When referencing when something happened or when something is scheduled to happen, use the following formats:
+
+\subsection{Days}
+If something happened or is happening on the day you are writing your article, state it is happening today. This gives the story immediacy. If it happened the day before, say yesterday. If something will happen the next day, say tomorrow. For example,
+
+\begin{itemize}
+\item Tropical Storm Gonu headed toward Iran today, after lashing Oman yesterday with high winds and torrential rains. The storm is expected to continue losing strength by tomorrow.
+\end{itemize}
+
+Beyond yesterday, today and tomorrow, state the name of the day of the week, if it's within seven days. Beyond seven days, state the actual date. For example, if you're writing a story that is filed on a Friday (in this case June 8, 2007), it goes like this:
+
+\begin{itemize}
+\item Space Shuttle \textit{Atlantis} lifted off from Kennedy Space Center today, and will orbit the earth tomorrow before arriving at the International Space Station on Sunday. Atlantis is scheduled to return to Kennedy Space Center on June 19.
+\end{itemize}
+
+\subsection{Dates}
+\textit{Wikinews} style is to list the month, followed by the day of the month, optionally followed by the year. Single-digit days of the month should not be prefixed by a zero. Thus, for example: 
+\begin{itemize}
+\item November 2
+\item November 2014
+\item November 2, 2014
+\end{itemize}
+
+Do not use \href{https://en.wikipedia.org/wiki/Ordinal_number_(linguistics)}{ordinal numbers} (``-st,'' ``-nd,'' ``-rd,'' or ``-th'') in dates. Years, when present, must be separated from the date with a comma unless only month and year is specified. Generally speaking, ``this year'' and ``last month,'' etc. are preferable since \textit{Wikinews} articles are anchored to the date of their publication.
+
+\subsection{Month abbreviation}
+Months are generally not abbreviated.
+
+\subsection{Month/year constructions}
+No comma is needed in a month-and-year construction. A comma is needed between the date and the year and after the year in a specific date construction.
+
+\begin{itemize}
+\item The \textit{Santa incident} occurred in December 2004 in the newly renovated community building.
+\item The \textit{Santa incident} occurred on Decemeber 25, 2004, in the newly renovated community building.
+\end{itemize}
+
+\subsection{Time}
+Time can be written in either the 24-hour or 12-hour format. To assist readers who may be unfamiliar with your preferred time format, you may wish to include the alternative format in parenthesis, e.g., ``\textit{18:30 (6:30 p.m.)}.'' Although this may seem like extra work for the writer, it is best to remember that this style guide's intent is ease of understanding for the reader, not to enforce strict technical regional accuracy.
+
+Use a colon to separate the hours and minutes, except when using \href{https://en.wikipedia.org/wiki/Coordinated_Universal_Time}{Coordinated Universal Time} (UTC) when no separator is to be used.
+
+Always clarify the timezone, which can be either the country/city referred to or the timezone name/abbreviation, and its offset to UTC, for example,
+
+\begin{itemize}
+\item 1:00 p.m. New York Time (1800 UTC)
+\item 13:00 CET (1100 UTC)
+\item 13:00 British Summer Time (1200 UTC)
+\item 1:00 p.m. or 1 p.m. (13:00) local time (1600 UTC)
+\item Or ``All times in this article are Central European Summer Time - UTC + 2 h''
+\end{itemize}
+When using the 12-hour format, morning hours before noon and after midnight are designated as "a.m.", both letters lowercase with periods. Hours after noon and before midnight are "p.m." Again, both letters lowercase with periods.
+
+An exception for times of exactly 12 noon are called ``noon'' and 12 midnight are called ``midnight.'' Neither are referred to as ``12:00 a.m.'' or ``12:00 p.m.''
+
+\section{Names of people and organizations}
+On the first mention of a person in a story, write the person's organization, title, and full name. Try to include a local link or Wikipedia link to their organization and name. For example,
+
+\begin{itemize}
+\item ``When asked his opinion, \textcolor{blue}{American Association of Puppy Lovers} President \textcolor{blue}{John Doe} said puppies were fun and cute.''
+\end{itemize}
+
+On subsequent mentions, mention only the person's significant name without it being a wikilink. For western names this is the last name; many Asian countries use the first name for subsequent mentions. For example,
+
+\begin{itemize}
+\item  ``Puppies should be treated with respect and well-groomed, Doe added.''
+\end{itemize}
+
+When a person is first mentioned as the source of a quote, a different rule applies. Here, the order of importance (and order of referral) is as follows: \texttt{"Quoted text," Full name, Organization (title), said.} After that the same rules as above apply. An example:
+\begin{itemize}
+\item  ```Puppies are fun and cute,' \textcolor{blue}{John Doe}, \textcolor{blue}{American Association of Puppy Lovers} president, said.''
+\end{itemize}
+
+On subsequent mentions, mention only the person's last name without it being a wikilink, i.e., ``Puppies should be treated with respect and well-groomed, Doe added.''
+
+If this person has not been mentioned for a few paragraphs, use a shortened title on the next use to remind the reader, e.g., ``AAPL President Doe later responded by...''
+
+\subsection{People's titles in general}
+Here, again there is a difference between British and American traditions. Either tradition is acceptable, but whatever system is adopted for an individual article, it should be consistent throughout the story.
+
+For titles other than Mr., Ms., Mrs., and Dr., please spell the title in full on the first mention, although subsequent mentions may be abbreviated.
+
+When a person has a title, general rules for capitalization are:
+
+
+\begin{itemize}
+\item If the title is part of the name (listed before the name), it is capitalized. Example: Governor Jane Smith of Milliana.
+\item If the title is descriptive, listed after their name, it is lowercase. Example: Jane Smith, governor of Milliana.
+\end{itemize}
+
+Wikinews honors the protocol common in the country of origin of any royalty mentioned.
+
+\begin{itemize}
+\begin{description}
+\item[British royalty and anointed positions] Use the title plus given name, e.g., ``Lady Catherine,'' ``Prince Charles,'' etc.
+\end{description}
+\end{itemize}
+
+\subsection{Sex, gender, and pronouns}
+In general, a person's sex may be inferred and appropriate pronouns used. However there are certain cases where there may be confusion, or the subject expresses a specific preference, usually involving transgender/transsexual/transvestite or other sexual minority or sexual health topics. In these cases, consult the following guide, numbered in order of priority:
+
+\begin{enumerate}
+\item Use subject's preference, where known or made obvious.
+\item Use sex/gender the subject is transitioning toward/has transitioned into.
+\item Use sex/gender based on the name the subject is currently using.
+\item Use the known sex/gender of the individual.
+\end{enumerate}
+
+Where the individual's gender is an intrinsic element of the story, include an explanatory note stating the known facts; do not unduly sensationalize their part therein.
+
+For example,
+\begin{itemize}
+\item Last term she went home a boy, but over the break she began living as the girl she feels she is, the next step of her transition.
+\item Sarah, currently undergoing hormone treatment as part of her gender reassignment, was detained, in the early hours of the morning, following a report of the rape of her husband.
+\end{itemize}
+
+\subsection{Acronyms instead of full names}
+On the first mention of a body with a proper acronym or contraction, use a wikilinked full name. If you wish to use an acronym later in the article, place the acronym to be used in parentheses directly after the first mention, where the full name is used.
+
+\begin{itemize}
+\item The European Union (EU) announced Tuesday plans...
+\end{itemize}
+
+Thereafter, use the appropriate acronym/contraction sans-wikilink. Full capitalization of acronyms is standard.
+
+\begin{itemize}
+\item EU President José Manuel Barroso said...
+\end{itemize}
+
+\section{Wikilinking an article}
+Do not over-wikify articles. Link only particularly relevant background material. If your article is about a high-speed chase and accident, wikilinking the colour of the vehicle is probably not particularly relevant, but the city or region might be.
+
+Links within \textit{Wikinews} require no qualifiers. Links to the English Wikipedia ordinarily use the \texttt{\{\{\href{https://en.wikinews.org/wiki/Template:W}{w}\}\}} template.
+
+\begin{verbatim}
+[[Japan]]'s parliament, the {{w|Diet of Japan|Diet}}, requested...
+\end{verbatim}
+
+\noindent Local links often also use the template, which simplifies writing.
+
+\begin{verbatim}
+{{w|Japan}}'s parliament, the {{w|Diet of Japan|Diet}}, requested...
+\end{verbatim}
+
+When linking to a \textit{Wikinews} category or portal, use a mainspace redirect; thus, \texttt{[[Japan]]} rather than \texttt{[[:Category:Japan|Japan]]}.
+
+Do not link to another \textit{Wikinews} article that would be more appropriately listed in the related news section. Do not link to dates.
+
+It is almost always preferable to link to local redirects where they exist rather than to Wikipedia but individual exceptions may be possible. It may occasionally be necessary to link to other projects as well, such as Wiktionary. The \texttt{\{\{w\}\}} template has optional parameters to do these things.
+
+\section{HTML markup within articles}
+HTML markup should be an absolute last resort within any article. Preference should always be given to wikicode.
+
+\section{Appositives}
+Appositives are words (usually nouns with modifiers) that explain or identify the nouns they are placed next to. For example, consider this sentence, where the appositive is italicized: ``My dog, a \textit{golden retriever}, enjoys peanut butter.'' The appositive, ``golden retriever,'' explains and identifies ``my dog.''
+
+What is the relevance of appositives to \textit{Wikinews}? As a news website, \textit{Wikinews} articles constantly explain the identities of people with the use of appositives. Incorrectly punctuating appositives is a common grammatical error. The following details a commonly accepted rule on punctuating appositives (appositives again in italics): 
+
+\begin{itemize}
+\item \textbf{An appositive is offset by commas on both sides if the appositive is not vital to the meaning of the sentence.}
+\begin{itemize}
+\item David Cameron, the \textit{Prime Minister of the United Kingdom}, spoke at the United Nations today.
+\begin{itemize}
+\item This sentence would retain its meaning if the italicized appositive were removed.
+\end{itemize}
+\end{itemize}
+\item \textbf{An appositive is not punctuated if the appositive is vital to the meaning of the sentence.}
+\begin{itemize}
+\item British Prime Minister \textit{David Cameron} spoke at the United Nations today.
+\begin{itemize}
+\item Without the appositive ``David Cameron,'' this sentence would not make sense.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section{Quotes}
+See \href{https://en.wikinews.org/wiki/Category:Quotation_templates}{Category:Quotation templates} for available quotation templates.
+
+Professional news organizations will occasionally introduce errors in punctuation and spelling in spoken quotes. Be sure to proofread a quote before adding it to a story.
+
+You may choose to directly quote or paraphrase a source:
+
+\begin{itemize}
+\item ``Puppies are fun and cute,'' John Doe, American Association of Puppy Lovers president, said.
+\item Puppies should be treated with respect and groomed well, Doe added.
+\end{itemize}
+
+When editing spoken quotes, or informal texts and transcripts intended for exclusive interviews (emails and text chat logs), it is permissible to correct typos and errors in punctuation introduced in the transcription process as long as the edit still expresses the meaning exactly the way the source intended.
+
+When paraphrasing, be sure to word the statement so that it expresses the meaning exactly the way the source intended.
+
+To exclude a section of quoted material for summarizing or avoiding a confusing section of quoted material, use an ellipsis (...) to replace the removed text. If many lines of a transcript are removed, place the ellipsis on a line of its own where the removed text would have been. Be sure the remaining quoted material is not taken out of context; the text must express the meaning exactly the way the source intended.
+
+To add clarification to a quote or transcript, use square brackets ([]) to contain the words you have added, making sure your additions express the meaning exactly the way the source intended.
+
+\section{Italics}
+A number of other things should also be italicised. The names of ships should be italicised; if a ship prefix\footnote{See the Wikipedia article, ``\href{https://en.wikipedia.org/wiki/Ship_prefix}{ship prefixes},'' for more information} (such as ``MV'' for ``motor vessel'') is used, this should not be italicised, e.g., MV \textit{Costa Concordia}, RMS MV \textit{Titanic}, USS MV \textit{Forestal}. Similar treatment is to be given to spacecraft and aircraft with names other than a simple identification number, such as MV \textit{Clipper Maid of the Seas} (destroyed over Scotland in 1988), or Space Shuttle MV \textit{Discovery}.
+
+Titles of works of music (to include both songs and albums), literature, films, art, and game releases should be italicised:
+
+\begin{itemize}
+\item Jennifer Smith is best known for \textit{Really Boring Song}, which appeared on her 1992 debut \textit{Mindlessly Rubbish Album}.
+\item Michelangelo's famous sculpture \textit{David} is to be loaned to Djibouti for a year.
+\item Finnish game company CEO Jack Salesman described \textit{Random Generic Evil Game Ending in 666} as ``the greatest thing we've released since \textit{Sliced 'n' Diced Bread}.'' His company has entered administration following poor sales.
+\end{itemize}
+
+Where it is appropriate to use non-English text within an article it should also be italicised:
+
+\begin{itemize}
+\item Firefighter Muhammed Somebody immediately entered the burning orphanage in a bid to rescue those inside with a cry of ``\textit{Allahu Akbar}'' (``God is Great'').
+\end{itemize}
+
+Notice that a translation is provided even for the most well-known words and phrases. The translation is placed in parentheses and not italicised.
+
+\chapter{Using images and other pictures}
+When including pictures with Wikinews stories, they must abide by \textit{Wikinews}'s \href{https://en.wikinews.org/wiki/Wikinews:Image_use_policy}{image use policy}.
+
+The most important reason why pictures are used in \textit{Wikinews} stories is to help convey a clearer or more complete message for the reader. All images must be relevant to the story in which they are included. If this is unclear, then the relevancy must be detailed in a caption. The following code is for including a story image with a caption (Image, Specify box with caption, box size, caption, and image credit) that you may cut-and-paste into your stories:
+
+So, in the instance of the following code, from the ``Massive star cluster found in Milky Way''\footnote{``\href{https://en.wikinews.org/wiki/Massive_star_cluster_found_in_Milky_Way}{Massive star cluster found in Milky Way}''. \textit{Wikinews}. 26 March 2005. Retrieved 2 November 2014.} \textit{Wikinews} article, the picture to the right was the result:
+
+\begin{verbatim}
+[[File:Pleiades Spitzer big.jpg|250px|right|thumb|This file 
+image of the [[w:Pleiades|Pleiades]] star cluster does not 
+show the recent Westerlund 1 discovery, but is used to 
+illustrate what a star cluster looks like. {{image source|
+[[w:NASA|NASA]]}}]]
+\end{verbatim}
+
+\textbf{NOTICE} It is very important when using file photographs or symbols such as flags or logos to explain what they are and why they are included to provide relevancy. Do not assume that the reader will automatically know a flag image included in a story or if the flag belongs to any particular country. When using file images, it is important to point out that the image predates the event of the story and is not a representation of actual events that are being reported on. Denoting an image as from file as opposed to event-specific can be done with ``File image of'' or ``File photo from YYYY'' This full disclosure ensures that readers will not be confused by images included with \textit{Wikinews} text.
+
+
+\section{Image captions}
+Image captions should try to contain complete sentences. At the end of the caption, the original source of the image should be noted (if possible) and written in italics to offset it from the rest of the caption. Alternatively, \texttt{\{\{Image source\}\}} can be used.
+
+\texttt{Changing images}
+For ongoing news events, such as the spread of a disease or virus (e.g., \href{https://commons.wikimedia.org/wiki/File:H1N1_map.svg}{File:H1N1 map.svg}), the image hosted on Wikimedia Commons will be repeatedly updated. This means that the map on Commons is only accurate for a news article at the time of publication. To avoid this issue, the current map must be downloaded, and reuploaded to Commons with a date stamp in the file name. This new version should be used in the relevant \textit{Wikinews} article(s).
+
+When uploading the time-specific version of the image to Commons, please ensure that it is clear on the image page why an effective duplicate has been created. A short note such as ``This time-specific version of the image is required to maintain consistency in usage and comply with the archiving policy on the \textit{Wikinews}  sister project'' should suffice.
+
+\chapter{Miscellany}
+\section{\textit{Wikinews} categories}
+
+You should add category tags at the bottom of each article. At a bare minimum there should be categories for the geographical area involved (one for the country, and one for the region) and for a broad topic such as \href{https://en.wikinews.org/wiki/Category:Disasters_and_accidents}{Category:Disasters and accidents}.
+
+The Wikinews \texttt{\{\{date\}\}} and \texttt{\{\{dateline\}\}} templates automatically add the date category to your article, linking it to a list of all articles from that date.
+
+\section{Perfection}
+While you should obviously try to comply perfectly with this guide, it is difficult to avoid some small mistakes. Even the most experienced Wikinewsies will sometimes produce articles that do not comply with some of these points. Try to stick as closely as possible to this guide, and remember, if you get most things right, review should catch and if possible correct your occasional slip-ups.
+
+\section{Ignoring these rules}
+General compliance with this style guide is mandatory for publication, but it is anticipated there will be situations when, for whatever reason, it is best to bend or break one of the rules in it. It is recommended you hold back on doing this until you have some experience, as understanding how to apply the rules is generally a prerequisite of understanding when, why, and how to break them.
+
+\end{document}
